@@ -45,8 +45,9 @@ sudo apt update && sudo apt install -y  \
         git
 
 _print "Initiating Docker"
-sudo groupadd docker
-sudo usermod -aG docker "$USER"
+sudo groupadd docker && echo "Added group docker"
+sudo usermod -aG docker "$USER" && echo "Added user to group docker"
+echo ""
 
 _print "Setting Up SSH"
 
@@ -71,4 +72,4 @@ _print "Rebooting"
 echo "You're computer needs to reboot itself in order to finish the set up process."
 echo "Please make sure that you save anything that you need to."
 read -p "Press enter to continue..."
-sudo reboot
+sudo reboot now
