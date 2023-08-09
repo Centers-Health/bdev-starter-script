@@ -57,8 +57,8 @@ if [[ ! -f ~/.ssh/id_rsa ]]; then
     cat ~/.ssh/id_rsa.pub | xclip -sel clip
     echo "SSH key created and copied to clipboard"
     echo "Paste it in the 'key' field in the form that opens in your browser"
-    echo "Opening browser..."
-    xdg-open https://github.com/settings/ssh/new 2>/dev/null
+    echo "Opening firefox browser..."
+    firefox https://github.com/settings/ssh/new 2>/dev/null
     echo ""
     read -p "After you've saved the key, press enter to continue..."
     echo "Great!"
